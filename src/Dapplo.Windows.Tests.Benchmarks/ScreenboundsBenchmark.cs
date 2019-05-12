@@ -1,5 +1,5 @@
 ﻿//  Dapplo - building blocks for desktop applications
-//  Copyright (C) 2017-2018  Dapplo
+//  Copyright (C) 2017-2019  Dapplo
 // 
 //  For more information see: http://dapplo.net/
 //  Dapplo repositories are hosted on GitHub: https://github.com/dapplo
@@ -37,19 +37,19 @@ namespace Dapplo.Windows.Tests.Benchmarks
             var screenbounds = GetAllScreenBounds();
         }
 
-        [Benchmark, MemoryDiagnoser]
+        [Benchmark]
         public void ScreenBoundsNative()
         {
             var screenbounds = GetScreenBounds();
         }
 
-        [Benchmark, MemoryDiagnoser]
+        [Benchmark]
         public void ScreenBoundsPInvoke()
         {
             var screenbounds = GetAllScreenBounds();
         }
 
-        [Benchmark, MemoryDiagnoser]
+        [Benchmark]
         public void ScreenBoundsPInvokeCached()
         {
             var screenbounds = DisplayInfo.ScreenBounds;
